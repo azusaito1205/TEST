@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TextInput, Pressable, ScrollView } from 'react-native';
+import { Text, TextInput, Pressable, ScrollView, View } from 'react-native';
 import { router } from 'expo-router';
 import { generatePlan } from '../../lib/planGenerator';
 import { sessionStore } from '../../lib/sessionStore';
@@ -27,6 +27,12 @@ export default function Home() {
       <Pressable onPress={onNext} style={{ padding: 12, borderRadius: 12, borderWidth: 1 }}>
         <Text>自動で4分解して確認する</Text>
       </Pressable>
+
+      <View style={{ borderWidth: 1, borderRadius: 12, padding: 12 }}>
+        <Text style={{ fontWeight: '700' }}>追加済み機能</Text>
+        <Text>・録音（5秒チャンク）→文字起こし</Text>
+        <Text>・文字起こしテキストから逸脱度を計算</Text>
+      </View>
     </ScrollView>
   );
 }
